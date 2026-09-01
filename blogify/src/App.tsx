@@ -6,12 +6,10 @@ function App() {
   const [page, setPage] = useState("home");
   return (
     <div className="min-h-screen bg-[#0F172A]">
-      {page === "home" && (
-        <>
-          <Header setPage={setPage} />
-          <Home />
-        </>
-      )}
+      {page === "home" && <Header setPage={setPage} />}
+
+      {page === "home" && <Home />}
+
       {page === "dashboard" && <DashboardPage />}
     </div>
   );

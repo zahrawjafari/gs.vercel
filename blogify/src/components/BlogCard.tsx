@@ -1,12 +1,4 @@
-type Blog = {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-  createdAt: string;
-  author: string;
-};
+import type { Blog } from "./BlogData";
 type BlogCardProps = {
   blog: Blog;
 };
@@ -17,7 +9,8 @@ function BlogCard({ blog }: BlogCardProps) {
         <img
           src={blog.image}
           alt={blog.title}
-          className="h-52 w-full cursor-pointer object-cover transition-transform duration-500 group-hover:scale-110"/>
+          className="h-52 w-full cursor-pointer object-cover transition-transform duration-500 group-hover:scale-110"
+        />
       </div>
       <div className="p-5">
         <span className="inline-block text-xs font-medium text-gray-500 dark:text-slate-400">

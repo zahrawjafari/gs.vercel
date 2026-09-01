@@ -1,5 +1,5 @@
-import { blogData } from "./blogData";
 import { Eye } from "lucide-react";
+import { blogData } from "./BlogData";
 function BlogLists() {
   return (
     <div className="min-h-screen bg-[#0F172A] p-6 text-white md:p-10">
@@ -11,12 +11,18 @@ function BlogLists() {
         {blogData.map((blog) => (
           <div
             key={blog.id}
-            className="flex items-center justify-between border-b border-slate-700 p-5 last:border-b-0">
-            <div>
+            className="flex items-center justify-between border-b border-slate-700 p-5 last:border-b-0"
+          >
+            <div className="min-w-0">
               <h2 className="font-medium">{blog.title}</h2>
-              <p className="mt-1 text-sm text-slate-400">{blog.category}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {blog.category} · {blog.createdAt}
+              </p>
             </div>
-            <button className="flex items-center gap-2 text-sm text-slate-300 hover:text-white">
+            <button
+              type="button"
+              className="ml-4 flex shrink-0 items-center gap-2 text-sm text-slate-300 hover:text-white"
+            >
               <Eye size={17} />
               View
             </button>

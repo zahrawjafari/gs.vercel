@@ -7,7 +7,7 @@ function DashboardPage() {
   const [page, setPage] = useState("Dashboard");
   return (
     <div className="flex min-h-screen bg-[#0F172A] text-white">
-      <aside className="w-64 border-r border-slate-800 bg-[#1E293B]">
+      <aside className="w-64 shrink-0 border-r border-slate-800 bg-[#1E293B]">
         <div className="p-6">
           <img src="/images/blogify.svg" alt="Blogify" className="h-9 w-auto" />
         </div>
@@ -16,9 +16,10 @@ function DashboardPage() {
             onClick={() => setPage("Dashboard")}
             className={`flex w-full items-center gap-3 px-6 py-4 ${
               page === "Dashboard"
-                ? "border-r-4 border-white bg-slate-700"
+                ? "border-r-4 border-white bg-slate-700 text-white"
                 : "text-slate-400"
-            }`}>
+            }`}
+          >
             <span>▣</span>
             Dashboard
           </button>
@@ -26,9 +27,10 @@ function DashboardPage() {
             onClick={() => setPage("Add blogs")}
             className={`flex w-full items-center gap-3 px-6 py-4 ${
               page === "Add blogs"
-                ? "border-r-4 border-white bg-slate-700"
+                ? "border-r-4 border-white bg-slate-700 text-white"
                 : "text-slate-400"
-            }`}>
+            }`}
+          >
             <span>＋</span>
             Add blogs
           </button>
@@ -36,9 +38,10 @@ function DashboardPage() {
             onClick={() => setPage("Blog lists")}
             className={`flex w-full items-center gap-3 px-6 py-4 ${
               page === "Blog lists"
-                ? "border-r-4 border-white bg-slate-700"
+                ? "border-r-4 border-white bg-slate-700 text-white"
                 : "text-slate-400"
-            }`}>
+            }`}
+          >
             <span>☰</span>
             Blog lists
           </button>
@@ -46,15 +49,16 @@ function DashboardPage() {
             onClick={() => setPage("Comments")}
             className={`flex w-full items-center gap-3 px-6 py-4 ${
               page === "Comments"
-                ? "border-r-4 border-white bg-slate-700"
+                ? "border-r-4 border-white bg-slate-700 text-white"
                 : "text-slate-400"
-            }`}>
+            }`}
+          >
             <span>○</span>
             Comments
           </button>
         </div>
       </aside>
-      <main className="flex-1">
+      <main className="min-w-0 flex-1">
         {page === "Dashboard" && <Dashboard />}
         {page === "Add blogs" && <AddBlogs />}
         {page === "Blog lists" && <BlogLists />}

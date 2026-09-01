@@ -14,32 +14,23 @@ function Footer() {
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
               Quick links
             </h3>
+
             <div className="mt-4 flex flex-col gap-3">
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Best sellers
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Offers & deals
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Contact Us
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                FAQs
-              </a>
+              {[
+                "Home",
+                "Best sellers",
+                "Offers & deals",
+                "Contact Us",
+                "FAQs",
+              ].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </div>
           <div>
@@ -47,31 +38,21 @@ function Footer() {
               Need help?
             </h3>
             <div className="mt-4 flex flex-col gap-3">
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Delivery information
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Return & refund policy
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Payment methods
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Track your Order
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Contact Us
-              </a>
+              {[
+                "Delivery information",
+                "Return & refund policy",
+                "Payment methods",
+                "Track your Order",
+                "Contact Us",
+              ].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </div>
           <div>
@@ -79,26 +60,15 @@ function Footer() {
               Follow us
             </h3>
             <div className="mt-4 flex flex-col gap-3">
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Instagram
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Twitter
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                Facebook
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white">
-                YouTube
-              </a>
+              {["Instagram", "Twitter", "Facebook", "YouTube"].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="text-sm text-gray-500 hover:text-black dark:text-slate-400 dark:hover:text-white"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </div>
         </div>

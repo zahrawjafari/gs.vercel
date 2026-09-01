@@ -1,4 +1,14 @@
-export const blogData = [
+export type Blog = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  createdAt: string;
+  author: string;
+};
+
+export const blogData: Blog[] = [
   {
     id: "1",
     title: "A Simple Step-by-Step Guide to Managing Your Lifestyle",

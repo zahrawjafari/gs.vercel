@@ -1,9 +1,7 @@
 import { Search } from "lucide-react";
-
 type HeaderProps = {
   setPage: (value: string) => void;
 };
-
 function Header({ setPage }: HeaderProps) {
   return (
     <header className="border-b border-slate-800 bg-[#0F172A]">
@@ -15,7 +13,6 @@ function Header({ setPage }: HeaderProps) {
             className="h-8 w-auto sm:h-10"
           />
         </button>
-
         <div className="flex items-center gap-3">
           <button
             type="button"
@@ -23,7 +20,6 @@ function Header({ setPage }: HeaderProps) {
           >
             <Search size={18} />
           </button>
-
           <button
             type="button"
             onClick={() => setPage("dashboard")}
